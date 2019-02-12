@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">StackRecette</string>
     <string name="logo">StackRecette</string>
+    <string name="sign_out">Sign Out</string>
 </resources>

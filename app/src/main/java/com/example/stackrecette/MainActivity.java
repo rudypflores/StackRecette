@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 2;
     private FirebaseAuth mAuth;
     GoogleSignInClient mGoogleSignInClient;
+    FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
     public void onStart() {
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         //updateUI(currentUser);
+        mAuth.addAuthStateListener(mAuthListener);
     }
 
     @Override
@@ -46,6 +48,17 @@ public class MainActivity extends AppCompatActivity {
 
         // Initialize FireBase Auth
         mAuth = FirebaseAuth.getInstance();
+
+        //Send user to new activity if sign in successful
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if(firebaseAuth.getCurrentUser() != null) {
+                    startActivity(new Intent(MainActivity.this, MealScreen.class));
+                }
+
+            }
+        };
 
         SignInButton signInButton = findViewById(R.id.sign_in_button);
         signInButton.setSize(SignInButton.SIZE_STANDARD);
@@ -93,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
                 Log.w(TAG, "Google sign in failed", e);
-                // ...
+
             }
         }
     }
@@ -121,19 +134,5 @@ public class MainActivity extends AppCompatActivity {
                         // ...
                     }
                 });
-    }
-
-    private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
-        try {
-            GoogleSignInAccount account = completedTask.getResult(ApiException.class);
-
-            // Signed in successfully, show authenticated UI.
-            //updateUI(account);
-        } catch (ApiException e) {
-            // The ApiException status code indicates the detailed failure reason.
-            // Please refer to the GoogleSignInStatusCodes class reference for more information.
-            Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
-            //updateUI(null);
-        }
     }
 }
