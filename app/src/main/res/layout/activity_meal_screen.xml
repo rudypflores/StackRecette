@@ -10,29 +10,223 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="81dp"
         android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="58dp"
+            android:layout_height="65dp"
             android:gravity="center"
             android:text="@string/logo"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
     </LinearLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <SearchView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp" />
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal">
+        android:layout_height="590dp">
 
-        <SearchView
-            android:layout_width="357dp"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    </android.support.design.widget.TextInputLayout>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@android:color/holo_orange_light">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="60dp"
+                    android:layout_height="73dp"
+                    android:layout_gravity="center|right"
+                    android:contentDescription="@string/moreover"
+                    app:srcCompat="@drawable/arrow_right_white" />
+
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="132dp"
+                    android:layout_height="165dp"
+                    android:contentDescription="@string/todo"
+                    android:padding="10dp"
+                    android:src="@drawable/common_google_signin_btn_icon_light_normal" />
+
+                <TextView
+                    android:id="@+id/food_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:layout_marginStart="-23dp"
+                    android:layout_marginLeft="-23dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/food"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginBottom="20dp"
+                    android:numStars="4" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:alwaysDrawnWithCache="false"
+                app:cardBackgroundColor="@android:color/holo_orange_light">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="60dp"
+                    android:layout_height="73dp"
+                    android:layout_gravity="center|right"
+                    android:contentDescription="@string/moreover"
+                    app:srcCompat="@drawable/arrow_right_white" />
+
+                <ImageView
+                    android:id="@+id/avatar1"
+                    android:layout_width="132dp"
+                    android:layout_height="162dp"
+                    android:contentDescription="@string/todo"
+                    android:padding="10dp"
+                    android:src="@drawable/common_google_signin_btn_icon_light_normal" />
+
+                <TextView
+                    android:id="@+id/food_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:layout_marginStart="-23dp"
+                    android:layout_marginLeft="-23dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/food"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginBottom="20dp"
+                    android:numStars="4" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:alwaysDrawnWithCache="false"
+                app:cardBackgroundColor="@android:color/holo_orange_light">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="60dp"
+                    android:layout_height="73dp"
+                    android:layout_gravity="center|right"
+                    android:contentDescription="@string/moreover"
+                    app:srcCompat="@drawable/arrow_right_white" />
+
+                <ImageView
+                    android:id="@+id/avatar2"
+                    android:layout_width="132dp"
+                    android:layout_height="162dp"
+                    android:contentDescription="@string/todo"
+                    android:padding="10dp"
+                    android:src="@drawable/common_google_signin_btn_icon_light_normal" />
+
+                <TextView
+                    android:id="@+id/food_nam2e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:layout_marginStart="-23dp"
+                    android:layout_marginLeft="-23dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/food"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginBottom="20dp"
+                    android:numStars="4" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alwaysDrawnWithCache="false"
+                app:cardBackgroundColor="@android:color/holo_orange_light">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="60dp"
+                    android:layout_height="73dp"
+                    android:layout_gravity="center|right"
+                    android:contentDescription="@string/moreover"
+                    app:srcCompat="@drawable/arrow_right_white" />
+
+                <ImageView
+                    android:id="@+id/avatar3"
+                    android:layout_width="132dp"
+                    android:layout_height="162dp"
+                    android:contentDescription="@string/todo"
+                    android:padding="10dp"
+                    android:src="@drawable/common_google_signin_btn_icon_light_normal" />
+
+                <TextView
+                    android:id="@+id/food_name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:layout_marginStart="-23dp"
+                    android:layout_marginLeft="-23dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/food"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginBottom="20dp"
+                    android:numStars="4" />
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
