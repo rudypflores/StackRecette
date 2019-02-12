@@ -18,16 +18,17 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="StackRecette"
             android:textSize="35sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
     <SearchView
+        android:id="@+id/searchBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
