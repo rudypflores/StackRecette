@@ -4,11 +4,12 @@
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    android:gravity="center"
     android:orientation="vertical"
-    android:gravity="center">
+    tools:context=".MainActivity">
 
 
     <LinearLayout
@@ -27,13 +28,8 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <SearchView
-        android:id="@+id/searchBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
     <com.google.android.gms.common.SignInButton
-        android:id="@+id/googleSignIn"
+        android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"></com.google.android.gms.common.SignInButton>
 </LinearLayout>
