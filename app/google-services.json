@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "301562117708",
+    "firebase_url": "https://stackrecette.firebaseio.com",
+    "project_id": "stackrecette",
+    "storage_bucket": "stackrecette.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301562117708:android:76c00f0d9f2b59c2",
+        "android_client_info": {
+          "package_name": "com.example.stackrecette"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301562117708-bh17pmdk00i37ond5j26fmta79ojf3bc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.stackrecette",
+            "certificate_hash": "5530c2fe0fe9c063905a932026b3f6de95d19a3e"
+          }
+        },
+        {
+          "client_id": "301562117708-tlkb95narm0i0bjcas70u3c1fni206os.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBPB19P0DLMSqTDyXpSRVy19SstJkzFPY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301562117708-f22kiqmfa583el414g6tau79gg5p9rbe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
