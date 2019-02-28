@@ -8,6 +8,50 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:301562117708:android:4d3daadab89d4423",
+        "android_client_info": {
+          "package_name": "com.example.rudyflores.myfirstapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301562117708-smlsb1o0oo6fe9rs2s07fhsgsi39q4kl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rudyflores.myfirstapplication",
+            "certificate_hash": "20030e22dc6e8033ec5f4e22ca062e6ed007c063"
+          }
+        },
+        {
+          "client_id": "301562117708-tlkb95narm0i0bjcas70u3c1fni206os.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBPB19P0DLMSqTDyXpSRVy19SstJkzFPY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301562117708-tlkb95narm0i0bjcas70u3c1fni206os.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:301562117708:android:76c00f0d9f2b59c2",
         "android_client_info": {
           "package_name": "com.example.stackrecette"
@@ -15,11 +59,27 @@
       },
       "oauth_client": [
         {
+          "client_id": "301562117708-i1f39fhktbal58u56ldr73n08ncji063.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.stackrecette",
+            "certificate_hash": "20030e22dc6e8033ec5f4e22ca062e6ed007c063"
+          }
+        },
+        {
           "client_id": "301562117708-bh17pmdk00i37ond5j26fmta79ojf3bc.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.stackrecette",
             "certificate_hash": "5530c2fe0fe9c063905a932026b3f6de95d19a3e"
+          }
+        },
+        {
+          "client_id": "301562117708-5a8mqc7e50anek5pv8gn8eshq925tt91.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.stackrecette",
+            "certificate_hash": "8594de0fd63790916062a10661f747882c607d84"
           }
         },
         {

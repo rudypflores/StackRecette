@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">StackRecette</string>
     <string name="logo">StackRecette</string>
-<<<<<<< HEAD
+
     <string name="food">taco</string>
     <string name="moreover">moreOver</string>
     <string name="todo">asdf</string>
-=======
+
     <string name="sign_out">Sign Out</string>
->>>>>>> e53da5015dde71ca73d8ea3384e5a7f77285a7b3
+
 </resources>
