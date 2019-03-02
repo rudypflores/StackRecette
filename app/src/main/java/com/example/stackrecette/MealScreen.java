@@ -8,12 +8,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.loopj.android.http.*;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -35,6 +38,8 @@ public class MealScreen extends AppCompatActivity {
     FirebaseAuth.AuthStateListener mAuthListener;
 
     private TextView food_name;
+    private ImageView food_image;
+    private SearchView search;
 
     @Override
     protected void onStart() {
@@ -65,15 +70,11 @@ public class MealScreen extends AppCompatActivity {
             }
         });
 
-        food_name = findViewById(R.id.food_name12);
+        food_name = findViewById(R.id.food_name1);
+        food_image = findViewById(R.id.imageView1);
+        search = findViewById(R.id.search_input);
 
-        Button t = findViewById(R.id.test);
         
-        t.setOnClickListener(v -> {
-            new choose_meal().execute("http://www.recipepuppy.com/api/?i=egg");
-        });
-
-
     }
 
 
@@ -121,6 +122,7 @@ public class MealScreen extends AppCompatActivity {
             super.onPostExecute(result);
             Object[][] data = handle_json(result.toString());
             food_name.setText(data[0][0].toString());
+            Picasso.get().load(data[0][data[0].length-1].toString()).into(food_image);
             System.out.println("onpost" + result);
         }
 

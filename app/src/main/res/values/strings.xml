@@ -4,7 +4,8 @@
 
     <string name="food">taco</string>
     <string name="moreover">moreOver</string>
-    <string name="todo">asdf</string>
+    <string name="food_image">FOdd</string>
+    <string name="submit">submit</string>
 
     <string name="sign_out">Sign Out</string>
 
