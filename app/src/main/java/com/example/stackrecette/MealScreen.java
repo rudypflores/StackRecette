@@ -42,6 +42,7 @@ public class MealScreen extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListener;
 
+    public static final String key = "meal_screen_ingredient";
     private static final String url = "http://www.recipepuppy.com/api/";
     private TextView food_name;
     private ImageView food_image;
