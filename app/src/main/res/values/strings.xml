@@ -2,6 +2,11 @@
     <string name="app_name">StackRecette</string>
     <string name="logo">StackRecette</string>
 
+    <string name="title">Logo of the StackRecette App</string>
+
+    <string name="quote">2019 OverStack Studios™</string>
+    <string name="description">The late night recipe finder app!</string>
+
     <string name="food">taco</string>
     <string name="moreover">moreOver</string>
     <string name="food_image">FOdd</string>

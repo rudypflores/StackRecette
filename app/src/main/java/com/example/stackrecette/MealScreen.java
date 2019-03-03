@@ -17,6 +17,11 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.loopj.android.http.*;
@@ -36,22 +41,20 @@ import cz.msebera.android.httpclient.Header;
 
 public class MealScreen extends AppCompatActivity {
 
-    private Object[][] data;
     private Context context = this;
-    Button signOut;
+    Button sign_out_button;
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListener;
+    GoogleSignInClient mGoogleSignInClient;
+    GoogleApiClient mGoogleApiClient;
 
     public static final String key = "meal_screen_ingredient";
     private static final String url = "http://www.recipepuppy.com/api/";
-    private TextView food_name;
-    private ImageView food_image;
     private SearchView search;
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private LinearLayoutManager mLinearLayoutManager;
-    private mealAdapter mAppAdapter;
 
     @Override
     protected void onStart() {
@@ -64,7 +67,7 @@ public class MealScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meal_screen);
 
-        signOut = findViewById(R.id.sign_out_button);
+        sign_out_button = findViewById(R.id.sign_out_button);
         mAuth = FirebaseAuth.getInstance();
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -75,11 +78,10 @@ public class MealScreen extends AppCompatActivity {
                 }
             }
         };
-        signOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mAuth.signOut();
-            }
+
+        //Sign out through FireBase & GoogleClientAPI
+        sign_out_button.setOnClickListener(v -> {
+            mAuth.signOut();
         });
 
         search = findViewById(R.id.search_input);
