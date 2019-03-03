@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.Arrays;
+
 public class mealAdapter extends RecyclerView.Adapter<mealAdapter.MyViewHolder> {
 
     private Object[][] data;
@@ -73,7 +75,9 @@ public class mealAdapter extends RecyclerView.Adapter<mealAdapter.MyViewHolder> 
         public void onClick(View v)
         {
             Toast.makeText(itemView.getContext(), this.data[0].toString(), Toast.LENGTH_SHORT).show();
-            v.getContext().startActivity(new Intent(this.context,ingreScreen.class));
+            Intent intent = new Intent(this.context, ingreScreen.class);
+            intent.putExtra(MealScreen.key, Arrays.copyOfRange(this.data,1,this.data.length-1));
+            v.getContext().startActivity(intent);
         }
     }
 }
