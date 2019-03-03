@@ -1,5 +1,6 @@
 package com.example.stackrecette;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.StrictMode;
@@ -36,6 +37,7 @@ import cz.msebera.android.httpclient.Header;
 public class MealScreen extends AppCompatActivity {
 
     private Object[][] data;
+    private Context context = this;
     Button signOut;
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListener;
@@ -141,7 +143,7 @@ public class MealScreen extends AppCompatActivity {
             recyclerView.setHasFixedSize(true);
             mLinearLayoutManager = new LinearLayoutManager(MealScreen.this);
             recyclerView.setLayoutManager(mLinearLayoutManager);
-            mAdapter = new mealAdapter(data);
+            mAdapter = new mealAdapter(data,context);
             recyclerView.setAdapter(mAdapter);
         }
 

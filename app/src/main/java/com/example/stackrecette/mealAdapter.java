@@ -1,5 +1,7 @@
 package com.example.stackrecette;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,14 +9,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
 public class mealAdapter extends RecyclerView.Adapter<mealAdapter.MyViewHolder> {
 
     private Object[][] data;
+    private Context context;
 
-    public mealAdapter(Object[][] data) { this.data = data; }
+    public mealAdapter(Object[][] data, Context context) { this.data = data; this.context = context; }
 
     @NonNull
     @Override
@@ -34,7 +38,7 @@ public class mealAdapter extends RecyclerView.Adapter<mealAdapter.MyViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder,int i)
     {
-        holder.bind(data[i]);
+        holder.bind(data[i],context);
     }
 
 
@@ -43,6 +47,7 @@ public class mealAdapter extends RecyclerView.Adapter<mealAdapter.MyViewHolder> 
         private TextView food_name;
         private ImageView food_image;
         private Object[] data;
+        private Context context;
 
         public MyViewHolder(LayoutInflater inflater, ViewGroup parent)
         {
@@ -53,8 +58,9 @@ public class mealAdapter extends RecyclerView.Adapter<mealAdapter.MyViewHolder> 
             food_image = itemView.findViewById(R.id.food_image);
         }
 
-        public void bind(Object[] data)
+        public void bind(Object[] data, Context context)
         {
+            this.context = context;
             this.data = data;
             food_name.setText(this.data[0].toString());
             if(!(this.data[this.data.length-1].toString().isEmpty())) {
@@ -66,7 +72,8 @@ public class mealAdapter extends RecyclerView.Adapter<mealAdapter.MyViewHolder> 
         @Override
         public void onClick(View v)
         {
-
+            Toast.makeText(itemView.getContext(), this.data[0].toString(), Toast.LENGTH_SHORT).show();
+            v.getContext().startActivity(new Intent(this.context,ingreScreen.class));
         }
     }
 }
