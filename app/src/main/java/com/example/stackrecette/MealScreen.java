@@ -6,6 +6,8 @@ import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -43,6 +45,11 @@ public class MealScreen extends AppCompatActivity {
     private ImageView food_image;
     private SearchView search;
 
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private LinearLayoutManager mLinearLayoutManager;
+    private mealAdapter mAppAdapter;
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -71,22 +78,19 @@ public class MealScreen extends AppCompatActivity {
                 mAuth.signOut();
             }
         });
-        
-        search = findViewById(R.id.search_input);
 
+        search = findViewById(R.id.search_input);
         search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 new choose_meal().execute(url+"?i="+query);
                 return true;
             }
-
             @Override
             public boolean onQueryTextChange(String newText) {
                 return false;
             }
         });
-
     }
 
 
@@ -94,8 +98,6 @@ public class MealScreen extends AppCompatActivity {
 
     // inner class
     public class choose_meal extends AsyncTask<String, String, String> {
-
-        private static final String url = "http://www.recipepuppy.com/api/";
 
         //this method will do http request on the background thread
         @Override
@@ -133,8 +135,14 @@ public class MealScreen extends AppCompatActivity {
         {
             super.onPostExecute(result);
             Object[][] data = handle_json(result.toString());
-            setText(data);
             System.out.println("onpost" + result);
+
+            recyclerView = (RecyclerView) findViewById(R.id.recycler);
+            recyclerView.setHasFixedSize(true);
+            mLinearLayoutManager = new LinearLayoutManager(MealScreen.this);
+            recyclerView.setLayoutManager(mLinearLayoutManager);
+            mAdapter = new mealAdapter(data);
+            recyclerView.setAdapter(mAdapter);
         }
 
         //this method will use to handle json
@@ -166,25 +174,6 @@ public class MealScreen extends AppCompatActivity {
                 System.out.println(" unable to loop throught results obj json");
             }
             return data;
-        }
-
-        public void setText (Object[][] data)
-        {
-            int[] arr_foodname = {R.id.food_name1,R.id.food_name2,R.id.food_name3,R.id.food_name4,R.id.food_name5,R.id.food_name6,R.id.food_name7};
-            int[] arr_foodimage = {R.id.imageView1,R.id.imageView2,R.id.imageView3,R.id.imageView4,R.id.imageView5,R.id.imageView6,R.id.imageView7};
-            int[] arr_ll = {R.id.ll1,R.id.ll2,R.id.ll3,R.id.ll4,R.id.ll5,R.id.ll6,R.id.ll7};
-            System.out.println(Arrays.deepToString(data));
-            for(int i=0;i<arr_foodname.length;i++)
-            {
-                food_name = findViewById(arr_foodname[i]);
-                food_image = findViewById(arr_foodimage[i]);
-                food_name.setText(data[i][0].toString());
-
-                if(!String.valueOf(data[i][data[0].length-1]).isEmpty()) {
-                    Picasso.get().load(data[i][data[0].length - 1].toString()).into(food_image);
-                }
-                findViewById(arr_ll[i]).setVisibility(View.VISIBLE);
-            }
         }
     }
 
