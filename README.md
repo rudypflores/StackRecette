@@ -7,7 +7,7 @@ The user will require an Android phone with Android Ice Cream Sandwich (4.0) or 
 
 ## API's Used For The Project
 - Recipe Puppy API (Learn more at: http://www.recipepuppy.com/about/api/)
-- Google API (Used for handline sign-in)
+- Google API (Used for handling sign-in)
 
 ## Main Technologies From Our App
 - FireBase
