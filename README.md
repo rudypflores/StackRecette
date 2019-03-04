@@ -6,7 +6,7 @@ The user will require an Android phone with Android Ice Cream Sandwich (4.0) or 
 ![StackRecette Main Screen](screenshots/appSample.jpg)
 
 ## Open Source Libraries Used
-- Recipuppy API (Learn more at: http://www.recipepuppy.com/about/api/)
+- Recipe Puppy API (Learn more at: http://www.recipepuppy.com/about/api/)
 
 ## Main Technologies From Our App
 - FireBase
