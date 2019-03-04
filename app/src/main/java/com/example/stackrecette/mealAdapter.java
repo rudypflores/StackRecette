@@ -74,9 +74,9 @@ public class mealAdapter extends RecyclerView.Adapter<mealAdapter.MyViewHolder> 
         @Override
         public void onClick(View v)
         {
-            Toast.makeText(itemView.getContext(), this.data[0].toString(), Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this.context, ingreScreen.class);
-            intent.putExtra(MealScreen.key, Arrays.copyOfRange(this.data,1,this.data.length-1));
+            String[] arr = Arrays.copyOf(Arrays.copyOfRange(this.data,0,this.data.length-1),Arrays.copyOfRange(this.data,0,this.data.length-1).length,String[].class);
+            intent.putExtra(MealScreen.key, arr);
             v.getContext().startActivity(intent);
         }
     }

@@ -8,5 +8,7 @@
     <string name="submit">submit</string>
 
     <string name="sign_out">Sign Out</string>
+    <string name="ingredient">Ingredient</string>
+    <string name="ingredients">Ingredients:</string>
 
 </resources>
