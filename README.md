@@ -7,6 +7,7 @@ The user will require an Android phone with Android Ice Cream Sandwich (4.0) or 
 
 ## Open Source Libraries Used
 - Recipe Puppy API (Learn more at: http://www.recipepuppy.com/about/api/)
+- SimpleAuth Library by jaychang0917 (Find more from GitHub ReadMe at: https://github.com/jaychang0917/SimpleAuth)
 
 ## Main Technologies From Our App
 - FireBase
