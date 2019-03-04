@@ -5,9 +5,9 @@ The user will require an Android phone with Android Ice Cream Sandwich (4.0) or 
 
 ![StackRecette Main Screen](screenshots/appSample.jpg)
 
-## Open Source Libraries Used
+## API's Used For The Project
 - Recipe Puppy API (Learn more at: http://www.recipepuppy.com/about/api/)
-- SimpleAuth Library by jaychang0917 (Find more from GitHub ReadMe at: https://github.com/jaychang0917/SimpleAuth)
+- Google API (Used for handline sign-in)
 
 ## Main Technologies From Our App
 - FireBase
