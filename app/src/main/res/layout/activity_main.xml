@@ -21,28 +21,25 @@
         android:maxHeight="256dp"
         android:scaleType="fitCenter"
         android:layout_marginBottom="15dp"
-        android:contentDescription="StackRecette Logo"
-        app:srcCompat="@drawable/stackrecettelogo_main"
-        android:elevation="10dp"/>
+        android:contentDescription="@string/title"
+        app:srcCompat="@drawable/stackrecettelogo_main" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="The late night recipe finder app!"
+        android:text="@string/description"
         android:padding="15dp"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/colorPrimaryDark"
         android:textAlignment="center"
-        android:fontFamily="@font/lato_regular"
-        android:elevation="10dp"/>
+        app:fontFamily="@font/lato_regular" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="10dp">
+        android:layout_height="wrap_content">
 
     </com.google.android.gms.common.SignInButton>
 
@@ -54,8 +51,8 @@
         android:textStyle="bold"
         android:textAlignment="center"
         android:paddingTop="15dp"
-        android:fontFamily="@font/lato_light"
-        android:text="2019 OverStack Studios™" />
+        app:fontFamily="@font/lato_light"
+        android:text="@string/quote" />
 
 
 </LinearLayout>
