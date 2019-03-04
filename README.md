@@ -1,4 +1,4 @@
 # StackRecette
 Android Application for finding your late night snacks through the available resources
 
-![StackRecette Main Screen | 12x397](screenshots/main.png)
+![StackRecette Main Screen](screenshots/appSample.jpg)
