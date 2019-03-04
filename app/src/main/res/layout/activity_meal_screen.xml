@@ -5,48 +5,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MealScreen">
+    tools:context=".MealScreen"
+    android:background="#FFFFFF">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="81dp"
+        android:layout_height="120dp"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="5dp">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:gravity="center"
-            android:text="@string/logo"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:background="@color/colorPrimary"
-            android:elevation="8dp"
-            android:textSize="30sp" />
-
-    </LinearLayout>
-
-    <SearchView
-        android:id="@+id/search_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="10dp" >
-
-        <Button
-            android:id="@+id/sign_out_button"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sign_out" />
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_margin="5dp">
 
-    </SearchView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Place your ingredients to see your meal"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:padding="15dp"
+                android:textAlignment="center"
+                />
+
+            <Button
+                android:id="@+id/sign_out_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_out"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                />
+
+        </LinearLayout>
+
+        <SearchView
+            android:id="@+id/search_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:hapticFeedbackEnabled="true"
+            android:iconifiedByDefault="false"
+            android:queryHint="Ham, Cheese, Bread..."
+            android:searchIcon="@drawable/ic_search_black_24dp"
+            android:elevation="8dp"
+            android:queryBackground="@android:color/transparent"
+            >
+        </SearchView>
+
+    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="5dp"
         >
     </android.support.v7.widget.RecyclerView>
 

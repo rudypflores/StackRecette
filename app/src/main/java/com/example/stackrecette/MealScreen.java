@@ -2,30 +2,20 @@ package com.example.stackrecette;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
-import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.SearchView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.SearchView;
+
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.loopj.android.http.*;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -34,9 +24,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Arrays;
-
-import cz.msebera.android.httpclient.Header;
 
 
 public class MealScreen extends AppCompatActivity {
@@ -45,8 +32,6 @@ public class MealScreen extends AppCompatActivity {
     Button sign_out_button;
     FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener mAuthListener;
-    GoogleSignInClient mGoogleSignInClient;
-    GoogleApiClient mGoogleApiClient;
 
     public static final String key = "meal_screen_ingredient";
     private static final String url = "http://www.recipepuppy.com/api/";
@@ -85,6 +70,16 @@ public class MealScreen extends AppCompatActivity {
         });
 
         search = findViewById(R.id.search_input);
+
+        int searchSrcTextId = getResources().getIdentifier("android:id/search_src_text", null, null);
+        EditText searchEditText = (EditText) search.findViewById(searchSrcTextId);
+        searchEditText.setTextColor(Color.WHITE); // set the text color
+        searchEditText.setHintTextColor(Color.WHITE); // set the hint color
+
+        int closeButtonId = getResources().getIdentifier("android:id/search_close_btn", null, null);
+        ImageView closeButtonImage = (ImageView) search.findViewById(closeButtonId);
+        closeButtonImage.setImageResource(R.drawable.ic_close_black_24dp);
+
         search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
