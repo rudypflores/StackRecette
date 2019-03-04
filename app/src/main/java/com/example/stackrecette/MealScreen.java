@@ -83,7 +83,9 @@ public class MealScreen extends AppCompatActivity {
         search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                new choose_meal().execute(url+"?i="+query);
+                int page = (int)((Math.random()*15) + 1);
+                System.out.print(page);
+                new choose_meal().execute(url+"?i="+query+"&p="+page);
                 return true;
             }
             @Override
@@ -135,8 +137,6 @@ public class MealScreen extends AppCompatActivity {
         {
             super.onPostExecute(result);
             Object[][] data = handle_json(result.toString());
-            System.out.println("onpost" + result);
-
             recyclerView = (RecyclerView) findViewById(R.id.recycler);
             recyclerView.setHasFixedSize(true);
             mLinearLayoutManager = new LinearLayoutManager(MealScreen.this);
@@ -160,7 +160,6 @@ public class MealScreen extends AppCompatActivity {
             }
 
             try {
-                System.out.println("handling json...");
                 for(int i=0;i< arr.length(); i++)
                 {
                     JSONObject res_obj = arr.getJSONObject(i);
