@@ -33,20 +33,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "301562117708-tlkb95narm0i0bjcas70u3c1fni206os.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     },
@@ -83,6 +76,38 @@
           }
         },
         {
+          "client_id": "301562117708-hr9k3nao0g57m475efpogpsidkhp8h3v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.stackrecette",
+            "certificate_hash": "8a5a3018a0cf1285822d572f6590304549b9c8b5"
+          }
+        },
+        {
+          "client_id": "301562117708-7v59ptbk54eg4d7unrjtfhri3av3kfu5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.stackrecette",
+            "certificate_hash": "f67b32176990b26edb56f63c8cbf4b7ce523a684"
+          }
+        },
+        {
+          "client_id": "301562117708-2nolbcsuphkseenq695d2gae9utv8jvj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.stackrecette",
+            "certificate_hash": "877a9e60cf4102c8a3c4eb431d72cc44674c4d7b"
+          }
+        },
+        {
+          "client_id": "301562117708-bn2rltq0hcqs3h11756s078kdh0gfggq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.stackrecette",
+            "certificate_hash": "458f3a7c314a0c6c22719fcdf8980e062e203016"
+          }
+        },
+        {
           "client_id": "301562117708-tlkb95narm0i0bjcas70u3c1fni206os.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -93,20 +118,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "301562117708-tlkb95narm0i0bjcas70u3c1fni206os.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }
