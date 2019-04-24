@@ -1,0 +1,6 @@
+framework module Pods_StackRecette {
+  umbrella header "Pods-StackRecette-umbrella.h"
+
+  export *
+  module * { export * }
+}
