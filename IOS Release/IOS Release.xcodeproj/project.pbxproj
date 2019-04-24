@@ -15,6 +15,8 @@
 		84B7EF44226EF68200B06C60 /* IOS_ReleaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7EF43226EF68200B06C60 /* IOS_ReleaseTests.swift */; };
 		84B7EF4F226EF68200B06C60 /* IOS_ReleaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7EF4E226EF68200B06C60 /* IOS_ReleaseUITests.swift */; };
 		84B7EF5D226EF86F00B06C60 /* UIsearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7EF5C226EF86F00B06C60 /* UIsearch.swift */; };
+		84B7EF5F226F84C900B06C60 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7EF5E226F84C900B06C60 /* TableCell.swift */; };
+		84B7EF61226F918F00B06C60 /* food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7EF60226F918F00B06C60 /* food.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		84B7EF4E226EF68200B06C60 /* IOS_ReleaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_ReleaseUITests.swift; sourceTree = "<group>"; };
 		84B7EF50226EF68200B06C60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84B7EF5C226EF86F00B06C60 /* UIsearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIsearch.swift; sourceTree = "<group>"; };
+		84B7EF5E226F84C900B06C60 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		84B7EF60226F918F00B06C60 /* food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = food.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				84B7EF37226EF68200B06C60 /* LaunchScreen.storyboard */,
 				84B7EF3A226EF68200B06C60 /* Info.plist */,
 				84B7EF5C226EF86F00B06C60 /* UIsearch.swift */,
+				84B7EF5E226F84C900B06C60 /* TableCell.swift */,
+				84B7EF60226F918F00B06C60 /* food.swift */,
 			);
 			path = "IOS Release";
 			sourceTree = "<group>";
@@ -261,7 +267,9 @@
 			files = (
 				84B7EF5D226EF86F00B06C60 /* UIsearch.swift in Sources */,
 				84B7EF31226EF68100B06C60 /* ViewController.swift in Sources */,
+				84B7EF5F226F84C900B06C60 /* TableCell.swift in Sources */,
 				84B7EF2F226EF68100B06C60 /* AppDelegate.swift in Sources */,
+				84B7EF61226F918F00B06C60 /* food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
