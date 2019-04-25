@@ -9,11 +9,12 @@
 import UIKit
 import GoogleSignIn
 
-class ViewController: UIViewController, GIDSignInUIDelegate, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, GIDSignInUIDelegate, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var signOutButton: UIButton!
     @IBOutlet var table: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var sb: UITextField!
+    
     
     let delegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -27,6 +28,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate, UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        sb.delegate = self
+        
         
         if delegate.signedIn == false {
             signOutButton.isHidden = true
@@ -34,7 +37,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, UITableViewDelegate
             signOutButton.isHidden = false
         }
         
-        setUpFood()
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -71,19 +74,25 @@ class ViewController: UIViewController, GIDSignInUIDelegate, UITableViewDelegate
         
         return cell
     }
-    
-    func setUpFood()
-    {
-        let a = HttpQuery(ingre: "sf",page: 1)
-        
-        a.getFood() { data in
-            if let data = data {
-                for i in data {
-                    self.foodArr.append(food(food_name: i.title, img:i.thumbnail))
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if sb.text?.count != 0 {
+            print(sb.text!)
+            let a = HttpQuery(ingre: sb.text!, page: 1)
+            a.getFood() { data in
+                if let data = data {
+                    self.foodArr.removeAll()
+                    for i in data {
+                        self.foodArr.append(food(food_name: i.title, img:i.thumbnail))
+                    }
                 }
             }
         }
+        
+        return true
     }
+    
+    
     
     func getData (img: String) -> Data? {
         if let url = URL(string: img) {

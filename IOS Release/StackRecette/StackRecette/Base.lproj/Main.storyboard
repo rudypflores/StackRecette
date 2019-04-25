@@ -121,28 +121,32 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WDF-eN-jnf">
                                 <rect key="frame" x="0.0" y="72" width="375" height="595"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" showsSearchResultsButton="YES" id="Wb1-Dq-vPU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <color key="barTintColor" red="1" green="0.57738693679999997" blue="0.19094035379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textField key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ham,Cheese,Meat" textAlignment="natural" minimumFontSize="20" clearButtonMode="whileEditing" id="33c-Dz-Aaj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" red="1" green="0.64807494060000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <textInputTraits key="textInputTraits"/>
-                                </searchBar>
+                                </textField>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="141" id="yEr-fP-mJe" customClass="TableCell" customModule="StackRecette" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="375" height="141"/>
+                                        <rect key="frame" x="0.0" y="73" width="375" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yEr-fP-mJe" id="u6H-bM-oEj">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="140.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qg9-af-f51">
-                                                    <rect key="frame" x="15" y="19" width="97" height="97"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qg9-af-f51">
+                                                    <rect key="frame" x="15" y="19" width="97" height="24.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="97" id="4q6-MN-09G"/>
+                                                        <constraint firstAttribute="height" constant="110" id="QcY-GX-lYw"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="SSd-Jn-8Zw"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67d-VN-AgS">
-                                                    <rect key="frame" x="120" y="22" width="48" height="96.5"/>
+                                                    <rect key="frame" x="120" y="22" width="48" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="CLn-0p-cex"/>
                                                     </constraints>
@@ -152,12 +156,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="67d-VN-AgS" firstAttribute="leading" secondItem="Qg9-af-f51" secondAttribute="trailing" constant="9" id="2df-aU-CEz"/>
-                                                <constraint firstItem="Qg9-af-f51" firstAttribute="top" secondItem="u6H-bM-oEj" secondAttribute="topMargin" constant="10" id="7OS-wj-Ilc"/>
-                                                <constraint firstItem="Qg9-af-f51" firstAttribute="centerY" secondItem="67d-VN-AgS" secondAttribute="centerY" id="B1G-uV-PMx"/>
+                                                <constraint firstItem="67d-VN-AgS" firstAttribute="leading" secondItem="Qg9-af-f51" secondAttribute="trailing" constant="8" id="2df-aU-CEz"/>
+                                                <constraint firstItem="Qg9-af-f51" firstAttribute="top" secondItem="u6H-bM-oEj" secondAttribute="topMargin" constant="8" id="7OS-wj-Ilc"/>
+                                                <constraint firstItem="Qg9-af-f51" firstAttribute="centerY" secondItem="67d-VN-AgS" secondAttribute="centerY" constant="-2.75" id="B1G-uV-PMx"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="67d-VN-AgS" secondAttribute="trailing" constant="39" id="CJS-eh-P7t"/>
                                                 <constraint firstItem="67d-VN-AgS" firstAttribute="top" secondItem="u6H-bM-oEj" secondAttribute="topMargin" constant="11" id="DGK-Gx-XeZ"/>
-                                                <constraint firstItem="Qg9-af-f51" firstAttribute="leading" secondItem="u6H-bM-oEj" secondAttribute="leadingMargin" constant="-1" id="Tcf-lv-cy1"/>
+                                                <constraint firstItem="Qg9-af-f51" firstAttribute="leading" secondItem="u6H-bM-oEj" secondAttribute="leadingMargin" id="Tcf-lv-cy1"/>
                                                 <constraint firstItem="67d-VN-AgS" firstAttribute="centerY" secondItem="u6H-bM-oEj" secondAttribute="centerY" id="hry-Zc-vhc"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -187,14 +191,14 @@
                         <viewLayoutGuide key="safeArea" id="q0V-K1-CY3"/>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="Wb1-Dq-vPU" id="dgP-Un-dAX"/>
+                        <outlet property="sb" destination="33c-Dz-Aaj" id="FIp-tC-gCC"/>
                         <outlet property="signOutButton" destination="GAx-d6-OD0" id="Scf-Ya-4aP"/>
                         <outlet property="table" destination="WDF-eN-jnf" id="IvF-Tb-P1x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thH-Sb-ydG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="50"/>
+            <point key="canvasLocation" x="765.60000000000002" y="49.925037481259373"/>
         </scene>
     </scenes>
     <resources>

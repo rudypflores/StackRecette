@@ -24,7 +24,7 @@ class HttpQuery
         
         var dishArr = [dish]()
         
-        guard let url = URL(string: "http://www.recipepuppy.com/api/?i=onions,garlic&q=omelet&p=3") else {
+        guard let url = URL(string: "http://www.recipepuppy.com/api/?i="+self.ingre+"&p=2") else {
             return
         }
         
